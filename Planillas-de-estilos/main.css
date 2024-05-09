@@ -65,7 +65,7 @@ footer{
     background-color:#FFC100;
 }
 .foto-comida{
-    width: 250px;
+    max-width: 250px;
     height: 200px;
     border-radius: 80px;
 }
