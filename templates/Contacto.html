@@ -21,48 +21,49 @@
         <img class="logo-container" src="../Imagenes/logo-9976.png" alt="Logo" width="50" height="30">
 </nav>
 <body>
-    <h1>Formulario de Contacto</h1>
-    <form id="contactForm" onsubmit="return validateForm()">
-        <label for="name">Nombre:</label><br>
-        <input type="text" id="name" name="name"><br><br>
+    <div class="Formulario">
+        <h1>Formulario de Contacto</h1>
+        <form id="contactForm" onsubmit="return validateForm()">
+            <label for="name">Nombre:</label><br>
+            <input type="text" id="name" name="name"><br><br>
 
-        <label for="email">Email:</label><br>
-        <input type="email" id="email" name="email"><br><br>
+            <label for="email">Email:</label><br>
+            <input type="email" id="email" name="email"><br><br>
 
-        <label for="message">Mensaje:</label><br>
-        <textarea id="message" name="message"></textarea><br><br>
+            <label for="message">Mensaje:</label><br>
+            <textarea id="message" name="message"></textarea><br><br>
 
-        <input type="checkbox" id="subscribe" name="subscribe">
-        <label for="subscribe">Suscribirse a nuestro boletín</label><br><br>
+            <input type="checkbox" id="subscribe" name="subscribe">
+            <label for="subscribe">Suscribirse a nuestro boletín</label><br><br>
 
-        <label for="reason">Motivo de contacto:</label><br>
-        <select id="reason" name="reason">
-            <option value="">Selecciona un motivo</option>
-            <option value="consulta">Consulta</option>
-            <option value="sugerencia">Sugerencia</option>
-            <option value="reclamo">Reclamo</option>
-        </select><br><br>
+            <label for="reason">Motivo de contacto:</label><br>
+            <select id="reason" name="reason">
+                <option value="">Selecciona un motivo</option>
+                <option value="consulta">Consulta</option>
+                <option value="sugerencia">Sugerencia</option>
+                <option value="reclamo">Reclamo</option>
+            </select><br><br>
 
-        <label for="attachment">Adjuntar imagen:</label><br>
-        <input type="file" id="attachment" name="attachment"><br><br>
+            <label for="attachment">Adjuntar imagen:</label><br>
+            <input type="file" id="attachment" name="attachment"><br><br>
 
-        <input class="enviar" type="submit" value="Enviar">
-    </form>
-    <div>
-        <a href="https://www.facebook.com/?locale=es_LA">
-            <img class="redes" src="../Imagenes/facebook.png" alt="">
-        </a>
-        <a href="https://www.instagram.com">
-            <img class="redes" src="../Imagenes/instagram.png" alt="">
-        </a>
-        <a href="https://www.tiktok.com/@Sabor-Argentino">
-            <img class="redes" src="../Imagenes/tik-tok.png" alt="">
-        </a>
-        <a href="https://web.whatsapp.com">
-            <img class="redes" src="../Imagenes/whatsapp.png" alt="">
-        </a>
+            <input class="enviar" type="submit" value="Enviar">
+        </form>
+        <div>
+            <a href="https://www.facebook.com/?locale=es_LA">
+                <img class="redes" src="../Imagenes/facebook.png" alt="">
+            </a>
+            <a href="https://www.instagram.com">
+                <img class="redes" src="../Imagenes/instagram.png" alt="">
+            </a>
+            <a href="https://www.tiktok.com/@Sabor-Argentino">
+                <img class="redes" src="../Imagenes/tik-tok.png" alt="">
+            </a>
+            <a href="https://web.whatsapp.com">
+                <img class="redes" src="../Imagenes/whatsapp.png" alt="">
+            </a>
+        </div>
     </div>
-
     <script>
         function validateForm() {
             let name = document.getElementById('name').value;

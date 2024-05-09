@@ -21,6 +21,7 @@ body{
     justify-content: center;
     align-items: center;
     text-align: center;
+    border: 2px solid bl;
 }
 label{
     font-family: sans-serif;
@@ -43,4 +44,9 @@ label{
     margin: 20px;
     width: 40px;
     height: 40px;
+}
+.Formulario{
+    align-self: center;
+    margin-top: 23px;
+    border: 2px solid black;
 }
