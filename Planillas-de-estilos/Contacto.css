@@ -37,3 +37,9 @@ label{
 .enviar:active{
     background-color: rgb(93, 63, 20);
 }
+
+.redes{
+    margin: 20px;
+    width: 40px;
+    height: 40px;
+}
