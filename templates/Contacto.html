@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Formulario de Contacto</title>
+<style>
+    .error {
+        color: red;
+    }
+</style>
+</head>
+<body>
+    <h1>Formulario de Contacto</h1>
+    <form id="contactForm" onsubmit="return validateForm()">
+        <label for="name">Nombre:</label><br>
+        <input type="text" id="name" name="name"><br><br>
+
+        <label for="email">Email:</label><br>
+        <input type="email" id="email" name="email"><br><br>
+
+        <label for="message">Mensaje:</label><br>
+        <textarea id="message" name="message"></textarea><br><br>
+
+        <input type="checkbox" id="subscribe" name="subscribe">
+        <label for="subscribe">Suscribirse a nuestro boletín</label><br><br>
+
+        <label for="reason">Motivo de contacto:</label><br>
+        <select id="reason" name="reason">
+            <option value="">Selecciona un motivo</option>
+            <option value="consulta">Consulta</option>
+            <option value="sugerencia">Sugerencia</option>
+            <option value="reclamo">Reclamo</option>
+        </select><br><br>
+
+        <label for="attachment">Adjuntar imagen:</label><br>
+        <input type="file" id="attachment" name="attachment"><br><br>
+
+        <input type="submit" value="Enviar">
+    </form>
+
+    <script>
+        function validateForm() {
+            let name = document.getElementById('name').value;
+            let email = document.getElementById('email').value;
+            let message = document.getElementById('message').value;
+            let reason = document.getElementById('reason').value;
+
+            if (name === '' || email === '' || message === '' || reason === '') {
+                alert('Por favor completa todos los campos obligatorios.');
+                return false;
+            }
+            return true;
+        }
+    </script>
+</body>
+</html>
