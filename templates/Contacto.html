@@ -9,7 +9,17 @@
         color: red;
     }
 </style>
+<link rel="icon" href="../Imagenes/logo-9976.ico">
+<link rel="stylesheet" href="../Planillas-de-estilos/Contacto.css">
 </head>
+<nav>
+        <img class="logo-container" src="../Imagenes/logo-9976.png" alt="Logo" width="50" height="30">
+        <a class="pestania" href="Contacto.html">Contactanos</a>
+        <a class="pestania" href="../main.html">Recetas</a>
+        <a class="pestania" href="">Inicio</a>
+        <a class="pestania" href="">Faq</a>
+        <img class="logo-container" src="../Imagenes/logo-9976.png" alt="Logo" width="50" height="30">
+</nav>
 <body>
     <h1>Formulario de Contacto</h1>
     <form id="contactForm" onsubmit="return validateForm()">
@@ -36,7 +46,7 @@
         <label for="attachment">Adjuntar imagen:</label><br>
         <input type="file" id="attachment" name="attachment"><br><br>
 
-        <input type="submit" value="Enviar">
+        <input class="enviar" type="submit" value="Enviar">
     </form>
 
     <script>
