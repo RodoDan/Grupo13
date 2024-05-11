@@ -7,11 +7,11 @@ nav{
     border: 300px;
     justify-content: space-around;
     border-color: black;
-    background-color:#FFC100;
+    background-color:rgba(118, 54, 11, 0.833);
     padding: 10px;
 }
 body{
-    background-color: #FF8A08;
+    background-color: rgba(135, 64, 16, 0.833);
 }
 .main_div{
     display: flex;
@@ -55,14 +55,14 @@ h1{
     width: 40%;
     justify-content: center;
     height: auto;
-    background-color: #FF6500;
+
     align-items: center;
     font-family: sans-serif;
     text-align: center;
     color: rgb(0, 0, 0);
 }
 footer{
-    background-color:#FFC100;
+    background-color:#ffbf00a3;
 }
 .foto-comida{
     max-width: 250px;
@@ -83,7 +83,7 @@ p{
 .pestania{
     justify-content:baseline;
     text-align: center;
-
+    color:rgba(255, 255, 255, 0.692);
     width:100%;
     margin-inline: 10px;
     height:35px;
