@@ -9,9 +9,11 @@ nav{
     border-color: black;
     background-color:rgba(118, 54, 11, 0.833);
     padding: 10px;
+    font-weight: 500;
 }
 body{
     background-color: rgba(135, 64, 16, 0.833);
+
 }
 .main_div{
     display: flex;
@@ -62,6 +64,8 @@ h1{
     color: rgb(0, 0, 0);
 }
 footer{
+    align-items: center;
+    text-align: center;
     background-color:#ffbf00a3;
 }
 .foto-comida{

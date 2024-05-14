@@ -14,14 +14,12 @@ a{
     text-decoration: none;
     font-family: sans-serif;
     font-style:normal;
-    color: rgba(255, 255, 255, 0.663);
+    color: black;
 }
 body{
-    display: flexbox;
+    display: block;
     background-color: rgba(118, 54, 11, 0.833);
-    justify-content: center;
-    align-items: center;
-    text-align: center;
+    
     border: 2px solid bl;
 }
 label{
@@ -47,8 +45,21 @@ label{
     height: 40px;
 }
 .Formulario{
-    background-color: white;
+    align-items: center;
+    text-align: center;
+    background-color: rgba(255, 255, 255, 0.812);
     align-self: center;
     margin-top: 23px;
     border: 2px solid black;
+}
+footer{
+    align-items: center;
+    text-align: center;
+    margin-top: 3em;
+    background-color:#ffbf00a3;
+
+}
+p{
+    font-family: sans-serif;
+    font-style: normal;
 }
