@@ -3,11 +3,11 @@
     margin: 0;
 }
 .main_body{
-    width: 30em;
+    
     background-color: aliceblue;
     text-align: justify;
     align-items: center;
-    margin: 5em 10em 0 1em;
+    margin: 5em 0 0 1em;
     padding-inline: 1em;
     border-radius: 10px;
 }
@@ -56,8 +56,13 @@ footer{
     text-align: center;
 }
 .fondo{
-    visibility: hidden;
+    text-align: center;
 }
+.photo{
+    width: 250px;
+    height: auto;
+}
+
 h1{
     margin-bottom: 1em;
 }
