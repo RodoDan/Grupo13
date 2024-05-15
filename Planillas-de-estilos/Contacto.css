@@ -63,3 +63,20 @@ p{
     font-family: sans-serif;
     font-style: normal;
 }
+.pestania{
+    justify-content:baseline;
+    text-align: center;
+    color:rgb(255, 255, 255);
+    background-color: #e1ab09a3;
+    border-radius: 10px;
+    padding-top: 15px;
+    width:100%;
+    margin-inline: 1em;
+    height:35px;
+   
+}
+.pestania:hover{
+    background-color: rgba(135, 64, 16, 0.833);
+    box-shadow: 2px 2px 2px 0 black;
+    color: yellow;
+}
