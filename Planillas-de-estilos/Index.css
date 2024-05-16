@@ -45,11 +45,11 @@ a{
     overflow: scroll;
 }
 .muestra::-webkit-scrollbar{
-    width: 7px;
-    background: black;
+    width: 2px;
+    background: rgba(95, 43, 11, 0.633);
 }
 .muestra::-webkit-scrollbar-thumb{
-    background: rgb(255, 0, 0);
+    background: rgb(63, 32, 2);
     border-radius: 10px;
 }
 footer{
