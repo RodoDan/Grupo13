@@ -106,3 +106,15 @@ video {
     height: auto;
     object-fit: cover;
 }
+@media screen and (max-width: 1024px) {
+    video {
+        width: 50%;
+        }
+@media screen and (max-width: 768px) {
+    video {
+        width: 75%;
+        }    
+@media screen and (max-width: 320px) {
+    video {
+        width: 100%;
+        }
