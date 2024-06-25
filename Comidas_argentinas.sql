@@ -1,0 +1,1 @@
+SELECT * FROM grupo13_c24163.comidas;
