@@ -19,22 +19,54 @@
         <div class="fondo">
             <img class="photo" src="../Imagenes/logo-9976.png" height="50">
         </div>
-        <div class="main_body">
-            <h1>Preguntas frecuentes</h1>
-            <ul>
-                <h2>Como puedo entrar a las recetas?</h2>
-                <li>Seleccione la opcion de "Recetas" en la barra superior</li>
-                <li>Una vez ahi disfute de las recetas que proporciona la página</li>
-                <h2>Como puedo dejar un puntaje a las recetas?</h2>
-                <li>Actualmente no es posible,pero en un futuro cercano esperamos habilitarlas...</li>
-                <h2>Es posible agregar nuevas recetas?</h2>
-                <li>Las recetas son agregadas manualmente por cada administrador de la página</li>
-                <li>Es necesario asegurarse que no contengan nada inapropiado y que sean las mejores recetas</li>
-                <h2>Que hago si encuentro un error en la página?</h2>
-                <li>En la barra superior encontrará la opción de "contactanos" donde nos podra enviar cualquier reseña de la página</li>
-                <li>En caso de encontrar algún error envie un screenshot del mismo y nos pondremos en contacto</li>
-            </ul>
-        </div>
+        <main> 
+            <section id="form" class="container ">
+                <h2 class="search-title">Gestión de recetas</h2>
+                <p class="description" >En esta sección se podra llevar a cabo la gestión de las Nuevas Recetas</p>
+                <form action="#"  id="form-movie">
+                    <div class="d-flex">
+                        <div class="form-control d-flex-column">
+                            <label for="title">Nombre</label>
+                            <input type="text" class="input-search" name="title" id="title">
+                        </div>
+                        <div class="form-control d-flex-column">
+                            <label for="director">Descripcion</label>
+                            <input type="text" class="input-search" name="director" id="director">
+                        </div>
+                        <div class="form-control d-flex-column">
+                            <label for="rating">Puntuacion</label>
+                            <input type="number" class="input-search" name="rating" id="rating">
+                        </div>
+                        <div class="form-control d-flex-column">
+                            <label for="banner">Banner</label>
+                            <input type="url" class="input-search" name="banner" id="banner-form">
+                        </div>                
+                        <input type="hidden"  name="id" id="id-movie">
+                        <button class="btn-cac" type="button" id="btn-save-movie">Agregar</button>
+               
+                        <input type="hidden"  name="id" id="id-movie">
+                        <button class="btn-cac" type="button" id="btn-change-movie">Consultar</button>
+                    </div>
+                </form> 
+            </section>
+            <section id="list" class="container">
+                <h3 class="subtitle">Listado de peliculas</h3>
+                <table id="list-table-movies" class="table">
+                    <thead>
+                        <tr>
+                            <th>Nombre</th>
+                            <th>Descripcion</th>
+                            <th>Puntuacion</th>
+                            <th>Banner</th>
+                            <th>Acciones</th>
+                        </tr>
+                    </thead>
+                    <tbody id="tbody-table-movies">
+                        
+                    </tbody>
+                </table>
+            </section>  
+        </main>
         <footer>
             <h2><b>otras recetas</b></h2>
            
