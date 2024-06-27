@@ -82,6 +82,7 @@ h1{
 
 #form .d-flex{
     justify-content: space-around;
+    margin-inline: 0px;
 }
 
 .d-flex-column{
@@ -112,7 +113,7 @@ h1{
     font-weight: 400;
     line-height: 1.5;
     color: #fff;
-    background: rgba(255,255,255,0.1);
+    background: rgba(255, 255, 255, 0.968);
     border: 2px solid white; 
     border-radius: 25px;
     margin: 20px 0px;
@@ -174,7 +175,8 @@ h3{
 }
 
 .btn-cac{
-    background-color: #47340a;
+    margin: 10px;
+    background-color: #220a03;
     padding: 10px;
     border-radius: 10px;
     color:#FFF;
@@ -185,4 +187,34 @@ h3{
 .btn-cac:hover{
     color: #ffc098;
     border: 2px solid #ffc098;
+}
+.container{
+    background-color: #482503f2;
+    padding-right: 15px;
+    max-width: 1200px;
+    /* MARGENES */
+    margin: 120px auto;
+    border-radius: 10px;
+}
+.d-flex{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+.form-movie{
+    display: block;
+    justify-content: baseline;
+    align-items: center;
+}
+.btn-container{
+    display: flex;
+    justify-content: center;
+}
+.search-title{
+    color:white;
+}
+
+label{
+    align-self: center;
 }

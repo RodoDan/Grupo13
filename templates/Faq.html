@@ -13,7 +13,7 @@
             <a class="pestania" href="../Index.html">Inicio</a>
             <a class="pestania" href="main.html">Recetas</a>
             <a class="pestania" href="Contacto.html">Contactanos</a>
-            <a class="pestania" href="Faq.html">Faq</a>
+            <a class="pestania" href="Faq.html">Crud</a>
             <img class="logo-container" src="../Imagenes/logo-9976.png" alt="Logo" width="80" height="30">
         </nav>
         <div class="fondo">
@@ -41,16 +41,18 @@
                             <label for="banner">Banner</label>
                             <input type="url" class="input-search" name="banner" id="banner-form">
                         </div>                
+                    </div>
+                    <div class="btn-container" id="btn-container">
                         <input type="hidden"  name="id" id="id-movie">
                         <button class="btn-cac" type="button" id="btn-save-movie">Agregar</button>
                
                         <input type="hidden"  name="id" id="id-movie">
-                        <button class="btn-cac" type="button" id="btn-change-movie">Consultar</button>
+                        <button class="btn-cac" type="button" id="btn-update-movie">Consultar</button>
                     </div>
-                </form> 
+                    </form> 
             </section>
             <section id="list" class="container">
-                <h3 class="subtitle">Listado de peliculas</h3>
+                <h3 class="subtitle">Listado de recetas</h3>
                 <table id="list-table-movies" class="table">
                     <thead>
                         <tr>
@@ -75,5 +77,7 @@
                 <li><a href="https://www.paulinacocina.net/recetas">PaulinaCocina</a></li>
                 <p>&copy; 2024 Sabor Argentino: Recetas Caseras y Auténticas</p>
         </footer>
+        <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+        <script src="../static/js/crud-movies.js"></script>
     </body>
 </html>
