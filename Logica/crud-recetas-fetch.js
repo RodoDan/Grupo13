@@ -32,7 +32,6 @@ async function fetchData(url, method, data = null) {
         tableMovies.innerHTML='';
         recetas.forEach((receta, index) => {
         let tr = `<tr>
-<<<<<<< HEAD
         
                 <td>${movie.title}</td>
                 <td>${movie.director}</td>
@@ -42,17 +41,7 @@ async function fetchData(url, method, data = null) {
                 </td>
                 <td>
                 <button class="btn-cac" onclick='updateMovie(${movie.id_movie})'><img src="../Imagenes/lapiz.png"></button></img>
-                <button class="btn-cac" onclick='deleteMovie(${movie.id_movie})'><img src="../Imagenes/basura.png ></button></i>
-=======
-                <td>${receta.name}</td>
-                <td>${receta.ingredientes}</td>
-                <td>${receta.descripcion}</td>
-                <td>${receta.cheff}</td>                
-                <td>${receta.precio}</td>    
-                <td>            
-                <button class="btn-cac" onclick='updateReceta(${receta.id_receta})'><i class="fa fa-pencil" ></button></i>
-                <button class="btn-cac" onclick='deleteReceta(${receta.id_receta})'><i class="fa fa-trash" ></button></i>
->>>>>>> 3c92545a56eab8653f8cae95f08d3cc30b8bc530
+                <button class="btn-cac" onclick='deleteMovie(${movie.id_movie})'><img src="../Imagenes/basura.png ></button></img>
                 </td>
                 </tr>`;
         
