@@ -81,8 +81,9 @@ h1{
 }
 
 #form .d-flex{
-    justify-content: space-around;
-    margin-inline: 0px;
+    display: flex;
+    flex-direction: column;
+    margin-block: 10px;
 }
 
 .d-flex-column{
@@ -104,6 +105,7 @@ h1{
     color: #fff;
     font-size: 1rem;
     padding: 0 20px;
+    margin-block: 5px;
 }
 .form-select {
     display: block;
@@ -191,9 +193,11 @@ h3{
 .container{
     background-color: #482503f2;
     padding-right: 15px;
-    max-width: 1200px;
+    text-align: center;
+    max-width: 1000px;
     /* MARGENES */
     margin: 120px auto;
+    padding-top: 10px;
     border-radius: 10px;
 }
 .d-flex{
@@ -217,4 +221,14 @@ h3{
 
 label{
     align-self: center;
+}
+
+.input-search{
+    padding-inline:25px ;
+    max-width: 800px;
+    background-color: #6a492df2 ;
+    color: white;
+    border: 2px solid #ffffff;
+    border-radius: 40px;
+    margin-block: 5px;
 }
