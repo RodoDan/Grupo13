@@ -40,8 +40,8 @@ async function fetchData(url, method, data = null) {
                 <img src="${movie.banner}" width="30%">
                 </td>
                 <td>
-                <button class="btn-cac" onclick='updateMovie(${movie.id_movie})'><i class="fa fa-pencil" ></button></i>
-                <button class="btn-cac" onclick='deleteMovie(${movie.id_movie})'><i class="fa fa-trash" ></button></i>
+                <button class="btn-cac" onclick='updateMovie(${movie.id_movie})'><img src="../Imagenes/lapiz.png"></button></img>
+                <button class="btn-cac" onclick='deleteMovie(${movie.id_movie})'><img src="../Imagenes/basura.png ></button></i>
                 </td>
                 </tr>`;
         
