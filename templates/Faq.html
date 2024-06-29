@@ -23,44 +23,59 @@
             <section id="form" class="container ">
                 <h2 class="search-title">Gestión de recetas</h2>
                 <p class="description" >En esta sección se podra llevar a cabo la gestión de las Nuevas Recetas</p>
-                <form action="#"  id="form-movie">
+                <form action="#"  id="form-receta">
                     <div class="d-flex">
                         <div class="form-control d-flex-column">
-                            <label for="title">Nombre</label>
-                            <input type="text" class="input-search" name="title" id="title">
+                            <label for="name">Nombre Receta</label>
+                            <input type="text" class="input-search" name="name" id="name">
                         </div>
                         <div class="form-control d-flex-column">
-                            <label for="director">Descripcion</label>
-                            <input type="text" class="input-search" name="director" id="director">
+                            <label for="ingredientes">Ingredientes</label>
+                            <input type="text" class="input-search" name="ingredientes" id="ingredientes">
                         </div>
                         <div class="form-control d-flex-column">
-                            <label for="rating">Puntuacion</label>
-                            <input type="number" class="input-search" name="rating" id="rating">
+                            <label for="descripcion">Descripción</label>
+                            <input type="text" class="input-search" name="descripcion" id="descripcion">
                         </div>
                         <div class="form-control d-flex-column">
-                            <label for="banner">Banner</label>
-                            <input type="url" class="input-search" name="banner" id="banner-form">
-                        </div>                
+                            <label for="cheff">Cheff</label>
+                            <input type="url" class="input-search" name="cheff" id="cheff">
+                        </div>    
+                        <div class="form-control d-flex-column">
+                            <label for="precio">Precio</label>
+                            <input type="url" class="input-search" name="precio" id="precio">
+                        </div>              
                     </div>
                     <div class="btn-container" id="btn-container">
+<<<<<<< HEAD
                         <input type="hidden"  name="id" id="id-movie">
                         <button class="btn-cac" type="button" id="btn-save-movie">Agregar</button>
+=======
+                        <input type="hidden"  name="id" id="id_receta">
+                        <button class="btn-cac" type="button" id="btn-save-receta">Agregar</button>
+                        <!--
+                        <input type="hidden"  name="id" id="id_receta">
+                        <button class="btn-cac" type="button" id="btn-update-receta">Consultar</button>
+                        -->
+>>>>>>> 3c92545a56eab8653f8cae95f08d3cc30b8bc530
                     </div>
                     </form> 
             </section>
             <section id="list" class="container">
                 <h3 class="subtitle">Listado de recetas</h3>
-                <table id="list-table-movies" class="table">
+                <table id="list-table-recetas" class="table">
                     <thead>
                         <tr>
-                            <th>Nombre</th>
-                            <th>Descripcion</th>
-                            <th>Puntuacion</th>
-                            <th>Banner</th>
-                            <th>Acciones</th>
+                            <th>Nombre Receta</th>
+                            <th>Ingredientes</th>
+                            <th>Descripción</th>
+                            <th>Cheff</th>
+                            <th>Precio</th>
                         </tr>
                     </thead>
-                    <tbody id="tbody-table-movies">
+                    <tbody id="tbody-table-recetas">
+
+                    
                         
                     </tbody>
                 </table>

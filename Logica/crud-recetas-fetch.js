@@ -26,12 +26,13 @@ async function fetchData(url, method, data = null) {
         }
     }
 
-    async function showMovies(){
-        let movies = await fetchData(BASEURL+'/api/movies/', 'GET');
-        const tableMovies = document.querySelector('#list-table-movies tbody');
+    async function showRecetas(){
+        let recetas = await fetchData(BASEURL+'/api/recetas/', 'GET');
+        const tableMovies = document.querySelector('#list-table-recetas tbody');
         tableMovies.innerHTML='';
-        movies.forEach((movie, index) => {
+        recetas.forEach((receta, index) => {
         let tr = `<tr>
+<<<<<<< HEAD
         
                 <td>${movie.title}</td>
                 <td>${movie.director}</td>
@@ -42,6 +43,16 @@ async function fetchData(url, method, data = null) {
                 <td>
                 <button class="btn-cac" onclick='updateMovie(${movie.id_movie})'><img src="../Imagenes/lapiz.png"></button></img>
                 <button class="btn-cac" onclick='deleteMovie(${movie.id_movie})'><img src="../Imagenes/basura.png ></button></i>
+=======
+                <td>${receta.name}</td>
+                <td>${receta.ingredientes}</td>
+                <td>${receta.descripcion}</td>
+                <td>${receta.cheff}</td>                
+                <td>${receta.precio}</td>    
+                <td>            
+                <button class="btn-cac" onclick='updateReceta(${receta.id_receta})'><i class="fa fa-pencil" ></button></i>
+                <button class="btn-cac" onclick='deleteReceta(${receta.id_receta})'><i class="fa fa-trash" ></button></i>
+>>>>>>> 3c92545a56eab8653f8cae95f08d3cc30b8bc530
                 </td>
                 </tr>`;
         
@@ -53,16 +64,17 @@ async function fetchData(url, method, data = null) {
 * un registro de pelicula
 * @returns
 */
-async function saveMovie(){
-    const idMovie = document.querySelector('#id-movie').value;
-    const title = document.querySelector('#title').value;
-    const director = document.querySelector('#director').value;
-    const releaseDate = document.querySelector('#release-date').value;
-    const banner = document.querySelector('#banner-form').value;
+async function saveReceta(){
+    const id_Receta = document.querySelector('#id_receta').value;
+    const name = document.querySelector('#name').value;
+    const ingredientes = document.querySelector('#ingredientes').value;
+    const releaseDate = document.querySelector('#descripcion').value;
+    const cheff = document.querySelector('#cheff').value;
+    const precio = document.querySelector('#precio').value;
     //VALIDACION DE FORMULARIO
-    if (!title || !director || !releaseDate || !banner) {
+    if (!name || !ingredientes || !releaseDate || !cheff|| !precio) {
     Swal.fire({
-    title: 'Error!',
+    name: 'Error!',
     text: 'Por favor completa todos los campos.',
     icon: 'error',
     confirmButtonText: 'Cerrar'
@@ -70,33 +82,80 @@ async function saveMovie(){
     return;
     }
     // Crea un objeto con los datos de la película
-    const movieData = {
-    title: title,
-    director: director,
-    release_date: releaseDate,
-    banner: banner,
+    const recetaData = {
+    name: name,
+    ingredientes: ingredientes,
+    descripcion: releaseDate,
+    cheff: cheff,
+    precio: precio,
     };
     let result = null;
-// Si hay un idMovie, realiza una petición PUT para actualizar la película existente
-if(idMovie!==""){
-result = await fetchData(`${BASEURL}/api/movies/${idMovie}`, 'PUT', movieData);
+// Si hay un idReceta, realiza una petición PUT para actualizar la película existente
+if(id_Receta!==""){
+result = await fetchData(`${BASEURL}/api/recetas/${id_Receta}`, 'PUT', recetaData);
 }else{
-// Si no hay idMovie, realiza una petición POST para crear una nueva película
-result = await fetchData(`${BASEURL}/api/movies/`, 'POST', movieData);
+// Si no hay idReceta, realiza una petición POST para crear una nueva película
+result = await fetchData(`${BASEURL}/api/recetas/`, 'POST', recetaData);
 }
-const formMovie = document.querySelector('#form-movie');
+const formMovie = document.querySelector('#form-receta');
 formMovie.reset();
 Swal.fire({
-title: 'Exito!',
+name: 'Exito!',
 text: result.message,
 icon: 'success',
 confirmButtonText: 'Cerrar'
 })
-showMovies();
+showRecetas();
 }
-        document.addEventListener('DOMContentLoaded',function(){
-            const btnSaveMovie = document.querySelector('#btn-save-movie');
-            //ASOCIAR UNA FUNCION AL EVENTO CLICK DEL BOTON
-            btnSaveMovie.addEventListener('click',saveMovie);
-            showMovies();
-            });
+
+
+/**
+ * Function que permite eliminar una pelicula del array del localstorage
+ * de acuedo al indice del mismo
+ * @param {number} id posición del array que se va a eliminar
+ */
+function deleteReceta(id){
+    Swal.fire({
+        title: "Esta seguro de eliminar la receta?",
+        showCancelButton: true,
+        confirmButtonText: "Eliminar",
+    }).then(async (result) => {
+        if (result.isConfirmed) {
+          let response = await fetchData(`${BASEURL}/api/recetas/${id}`, 'DELETE');
+          showRecetas();
+          Swal.fire(response.message, "", "success");
+        }
+    });
+    
+}
+
+/**
+ * Function que permite cargar el formulario con los datos de la pelicula 
+ * para su edición
+ * @param {number} id Id de la pelicula que se quiere editar
+ */
+async function updateReceta(id){
+    //Buscamos en el servidor la pelicula de acuerdo al id
+    let response = await fetchData(`${BASEURL}/api/recetas/${id}`, 'GET');
+    const id_receta = document.querySelector('#id_receta');
+    const name = document.querySelector('#name');
+    const ingredientes = document.querySelector('#ingredientes');
+    const descripcion = document.querySelector('#descripcion');
+    const cheff = document.querySelector('#cheff');
+    const precio = document.querySelector('#precio');
+    
+    id_receta.value = response.id_receta;
+    name.value = response.name;
+    ingredientes.value = response.ingredientes;
+    descripcion.value = response.descripcion;
+    cheff.value = response.cheff;
+    precio.value = response.precio;
+
+}
+
+document.addEventListener('DOMContentLoaded',function(){
+    const btnSaveMovie = document.querySelector('#btn-save-receta');
+    //ASOCIAR UNA FUNCION AL EVENTO CLICK DEL BOTON
+    btnSaveMovie.addEventListener('click',saveReceta);
+    showRecetas();
+    });
