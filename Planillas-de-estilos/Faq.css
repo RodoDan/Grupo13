@@ -239,3 +239,7 @@ label{
     width: max-content;
     height: max-content;
 }
+
+.btn-rec{
+    background-color: #4a1e1100;
+}

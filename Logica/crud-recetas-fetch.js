@@ -39,8 +39,8 @@ async function fetchData(url, method, data = null) {
                 <td>${receta.cheff}</td>                
                 <td>${receta.precio}</td>    
                 <td>  
-                <button class="btn-cac" onclick='updateReceta(${receta.id_receta})'><img width ="80" height ="30" src="../Imagenes/lapiz.png"></button></img>
-                <button class="btn-cac" onclick='deleteReceta(${receta.id_receta})'><img width ="80" height ="30" src="../Imagenes/basura.png ></button></img>
+                <button class="btn-rec" onclick='updateReceta(${receta.id_receta})'><img width ="50" height ="30" src="../Imagenes/lapiz.png"></button></img>
+                <button class="btn-rec" onclick='deleteReceta(${receta.id_receta})'><img width ="50" height ="30" src="../Imagenes/basura.png"></button></img>
                 </td>
                 </tr>`;
         
