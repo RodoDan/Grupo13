@@ -97,8 +97,7 @@ h1{
 
 .form-control input {
     height: 50px;
-    width: 100%;
-    background: rgba(255,255,255,0.1);
+    background: #6a492df2 ;
     border: 2px solid white;
     outline: none;
     border-radius: 25px;
@@ -180,14 +179,19 @@ h3{
     margin: 10px;
     background-color: #220a03;
     padding: 10px;
-    border-radius: 10px;
+    font-size: 1rem;
+    font-weight:bolder;
+    border-radius: 20px;
     color:#FFF;
+    height: 4rem;
+    width: 7rem;
     cursor: pointer;
 }
 
 /* Pseudoclases */
 .btn-cac:hover{
-    color: #ffc098;
+    background-color: rgb(255, 255, 255);
+    color: #482503f2;
     border: 2px solid #ffc098;
 }
 .container{
@@ -226,15 +230,32 @@ label{
 .input-search{
     justify-self: center;
     padding-inline:20px ;
-    width: 250px;
+    min-width: 250px;
+    min-height: 50px;
     max-width: 800px;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5;
+    color: #fff;
     background-color: #6a492df2 ;
     color: white;
     border: 2px solid #ffffff;
-    border-radius: 40px;
+    border-radius: 25px;
+    font-size: 1rem;
+    padding: 0 20px;
     margin-block: 5px;
 }
 
+.input-search::-webkit-scrollbar{
+    margin-top: 10px;
+    width: 3px;
+    color:#000000f2;
+}
+.input-search::-webkit-scrollbar-thumb{
+    background: rgb(255, 255, 255);
+    border-radius: 10px;
+
+}
 .imagenFondo{
     width: max-content;
     height: max-content;
@@ -242,4 +263,8 @@ label{
 
 .btn-rec{
     background-color: #4a1e1100;
+}
+
+.btn-rec:hover{
+    background-color: #FFF;
 }
