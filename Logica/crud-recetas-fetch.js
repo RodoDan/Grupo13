@@ -1,4 +1,9 @@
-const BASEURL = 'http://127.0.0.1:5000';
+// Para ejecutarlo con la base y el back local
+// const BASEURL = 'http://127.0.0.1:5000';
+
+// Para ejecutarlo con la base y el back online
+const BASEURL = 'https://leonardoaguirrecaceres.pythonanywhere.com/'
+
 /**
 * Función para realizar una petición fetch con JSON.
 * @param {string} url - La URL a la que se realizará la petición.
