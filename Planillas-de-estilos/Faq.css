@@ -262,7 +262,11 @@ label{
 }
 
 .btn-rec{
+    width: auto;
+    margin: 10px;
     background-color: #4a1e1100;
+    border: wheat 2px solid;
+    border-radius: 100px;
 }
 
 .btn-rec:hover{
