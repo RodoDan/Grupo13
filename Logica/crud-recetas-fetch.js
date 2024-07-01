@@ -28,24 +28,23 @@ async function fetchData(url, method, data = null) {
 
     async function showRecetas(){
         let recetas = await fetchData(BASEURL+'/api/recetas/', 'GET');
-        const tableMovies = document.querySelector('#list-table-recetas tbody');
-        tableMovies.innerHTML='';
+        const tableRecetas = document.querySelector('#list-table-recetas tbody');
+        tableRecetas.innerHTML='';
         recetas.forEach((receta, index) => {
         let tr = `<tr>
         
-                <td>${movie.title}</td>
-                <td>${movie.director}</td>
-                <td>${movie.release_date}</td>
-                <td>
-                <img src="${movie.banner}" width="30%">
-                </td>
-                <td>
-                <button class="btn-cac" onclick='updateMovie(${movie.id_movie})'><img src="../Imagenes/lapiz.png"></button></img>
-                <button class="btn-cac" onclick='deleteMovie(${movie.id_movie})'><img src="../Imagenes/basura.png ></button></img>
+               <td>${receta.name}</td>
+                <td>${receta.ingredientes}</td>
+                <td>${receta.descripcion}</td>
+                <td>${receta.cheff}</td>                
+                <td>${receta.precio}</td>    
+                <td>  
+                <button class="btn-cac" onclick='updateReceta(${receta.id_receta})'><img width = 600 height = 800 src="../Imagenes/lapiz.png"></button></img>
+                <button class="btn-cac" onclick='deleteReceta(${receta.id_receta})'><img width = 600 height = 800 src="../Imagenes/basura.png ></button></img>
                 </td>
                 </tr>`;
         
-        tableMovies.insertAdjacentHTML("beforeend",tr);
+        tableRecetas.insertAdjacentHTML("beforeend",tr);
         });
         }
 /**
@@ -86,8 +85,8 @@ result = await fetchData(`${BASEURL}/api/recetas/${id_Receta}`, 'PUT', recetaDat
 // Si no hay idReceta, realiza una petición POST para crear una nueva película
 result = await fetchData(`${BASEURL}/api/recetas/`, 'POST', recetaData);
 }
-const formMovie = document.querySelector('#form-receta');
-formMovie.reset();
+const formReceta = document.querySelector('#form-receta');
+formReceta.reset();
 Swal.fire({
 name: 'Exito!',
 text: result.message,
@@ -143,8 +142,8 @@ async function updateReceta(id){
 }
 
 document.addEventListener('DOMContentLoaded',function(){
-    const btnSaveMovie = document.querySelector('#btn-save-receta');
+    const btnSaveReceta = document.querySelector('#btn-save-receta');
     //ASOCIAR UNA FUNCION AL EVENTO CLICK DEL BOTON
-    btnSaveMovie.addEventListener('click',saveReceta);
+    btnSaveReceta.addEventListener('click',saveReceta);
     showRecetas();
     });
