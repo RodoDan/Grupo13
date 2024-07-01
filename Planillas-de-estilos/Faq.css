@@ -224,11 +224,18 @@ label{
 }
 
 .input-search{
-    padding-inline:25px ;
+    justify-self: center;
+    padding-inline:20px ;
+    width: 250px;
     max-width: 800px;
     background-color: #6a492df2 ;
     color: white;
     border: 2px solid #ffffff;
     border-radius: 40px;
     margin-block: 5px;
+}
+
+.imagenFondo{
+    width: max-content;
+    height: max-content;
 }
