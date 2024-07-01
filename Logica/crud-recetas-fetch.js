@@ -53,7 +53,7 @@ async function fetchData(url, method, data = null) {
 * @returns
 */
 async function saveReceta(){
-    const id_Receta = document.querySelector('#id_receta').value;
+    const id_receta = document.querySelector('#id_receta').value;
     const name = document.querySelector('#name').value;
     const ingredientes = document.querySelector('#ingredientes').value;
     const releaseDate = document.querySelector('#descripcion').value;
@@ -79,8 +79,8 @@ async function saveReceta(){
     };
     let result = null;
 // Si hay un idReceta, realiza una petición PUT para actualizar la película existente
-if(id_Receta!==""){
-result = await fetchData(`${BASEURL}/api/recetas/${id_Receta}`, 'PUT', recetaData);
+if(id_receta!==""){
+result = await fetchData(`${BASEURL}/api/recetas/${id_receta}`, 'PUT', recetaData);
 }else{
 // Si no hay idReceta, realiza una petición POST para crear una nueva película
 result = await fetchData(`${BASEURL}/api/recetas/`, 'POST', recetaData);
